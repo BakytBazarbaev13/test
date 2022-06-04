@@ -1,0 +1,8 @@
+SELECT TOP(25) IngredientID, Weight/454.0 AS WeightInPounds 
+FROM  DishesIngredients
+ORDER BY Weight DESC ;
+
+
+Select distinct PolygonID,count(PolygonID-2)*180 as 
+SumOfAngles, count( PolygonID) as NumberOfAngles
+from RightAngles GROUP BY PolygonID
